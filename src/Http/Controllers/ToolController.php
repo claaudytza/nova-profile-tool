@@ -13,7 +13,7 @@ class ToolController extends Controller
                 "component" => "text-field",
                 "prefixComponent" => true,
                 "indexName" => __("Name"),
-                "name" => __("Name"),
+                "name" => __("MY Name"),
                 "attribute" => "name",
                 "value" => auth()->user()->name,
                 "panel" => null,
