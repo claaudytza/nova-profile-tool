@@ -1,5 +1,5 @@
 {
-    "name": "runlinenl/nova-profile-tool",
+    "name": "claaudytza/nova-profile-tool",
     "description": "A tool for Laravel Nova to allow users to edit their profile data",
     "keywords": [
         "laravel",
@@ -13,11 +13,11 @@
             "url": "../nova"
         }
     ],
-    "homepage": "https://github.com/runlinenl/nova-profile-tool",
+    "homepage": "https://github.com/claaudytza/nova-profile-tool",
     "license": "MIT",
     "authors": [
         {
-            "name": "Patrick Bergman",
+            "name": "Claudia",
             "email": "patrick@runline.nl",
             "role": "Developer"
         }
