@@ -52,6 +52,17 @@ class ToolController extends Controller
                 "panel" => null,
                 "sortable" => false,
                 "textAlign" => "left"
+            ],
+            [
+                "component" => "boolean-field",
+                "prefixComponent" => true,
+                "indexName" => __("Subscribe to Monthly Statistics E-mail"),
+                "name" => __("Subscribe to Monthly Statistics E-mail"),
+                "attribute" => "subscribed",
+                "value" => null,
+                "panel" => null,
+                "sortable" => false,
+                "textAlign" => "left"
             ]
         ]);
     }
@@ -64,7 +75,8 @@ class ToolController extends Controller
         request()->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'password' => 'nullable|string|confirmed'
+            'password' => 'nullable|string|confirmed',
+            'subscribed' => 'boolean'
         ]);
 
         if(request()->has('password')) {
@@ -72,6 +84,7 @@ class ToolController extends Controller
                 'name' => request('name'),
                 'email' => request('email'),
                 'password' => bcrypt(request('password')),
+                'subscribed' => request('subscribed'),
             ]);
         } else {
             auth()->user()->update(request()->only('name', 'email'));
